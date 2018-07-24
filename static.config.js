@@ -1,8 +1,6 @@
 import axios from 'axios'
 import React, { Component } from 'react'
 import { ServerStyleSheet } from 'styled-components'
-import path from 'path'
-import nodeExternals from 'webpack-node-externals'
 
 export default {
   getSiteData: () => ({
@@ -63,21 +61,4 @@ export default {
       )
     }
   },
-  webpack: config => {
-    const jsLoader = config.module.rules[0].oneOf[0]
-    let node_modules_dir = jsLoader.exclude
-    // console.log(node_modules_dir)
-    delete jsLoader.exclude
-    jsLoader.include = [
-      path.join(__dirname, 'src'),
-      path.join(__dirname, 'dist'),
-      path.join(__dirname, 'tmp'),
-      `${node_modules_dir}/linc-front-end/src`
-    ]
-    config.externals = [
-      nodeExternals({
-        whitelist: [/^linc-front-end/]
-      })
-    ]
-  }
 }
