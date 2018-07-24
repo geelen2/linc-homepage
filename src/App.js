@@ -4,7 +4,7 @@ import styled, { injectGlobal } from 'styled-components'
 import { hot } from 'react-hot-loader'
 //
 import Routes from 'react-static-routes'
-import { media } from './lfe/styles/traits'
+import { media } from 'lfe/styles/traits'
 
 injectGlobal`
   html {
