@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "axios": "^0.16.2",
-    "linc-front-end": "bitgenics/linc-front-end",
+    "linc-front-end": "https://git:$GITHUB_ACCESS_TOKEN@github.com/geelen2/linc-homepage.git",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
     "react-router": "^4.2.0",
