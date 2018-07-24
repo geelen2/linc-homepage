@@ -12,7 +12,7 @@
   },
   "dependencies": {
     "axios": "^0.16.2",
-    "linc-front-end": "https://git@github.com/geelen2/linc-homepage.git#master",
+    "linc-front-end": "https://git@github.com/bitgenics/linc-front-end.git#master",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
     "react-router": "^4.2.0",

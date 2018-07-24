@@ -6,7 +6,7 @@ import styled from 'styled-components'
 import { typography } from 'linc-front-end/src/styles/traits/index'
 
 const H1 = styled.h1`
-  ${ typography.f1.red };
+  ${ typography.f1.positive };
 `
 
 export default withSiteData(() => (
