@@ -7,11 +7,12 @@
     "start": "react-static start",
     "stage": "react-static build --staging",
     "build": "react-static build",
-    "serve": "serve dist -p 3000"
+    "serve": "serve dist -p 3000",
+    "preinstall": "sed -i .bak \"s/\\$GITHUB_ACCESS_TOKEN\\@/git:$GITHUB_ACCESS_TOKEN\\@/\" package.json"
   },
   "dependencies": {
     "axios": "^0.16.2",
-    "cfp-2018": "git+ssh://git@github.com:vsfest/cfp-2018.git",
+    "linc-front-end": "https://git:$GITHUB_ACCESS_TOKEN@github.com/geelen2/linc-homepage.git",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
     "react-router": "^4.2.0",
