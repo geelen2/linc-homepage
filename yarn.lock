@@ -5634,9 +5634,9 @@ levn@^0.3.0, levn@~0.3.0:
     prelude-ls "~1.1.2"
     type-check "~0.3.2"
 
-"linc-front-end@https://git@github.com/bitgenics/linc-front-end.git":
+"linc-front-end@git+ssh://git@github.com:bitgenics/linc-front-end.git":
   version "0.1.0"
-  resolved "https://git@github.com/bitgenics/linc-front-end.git#a5c77648293cdfc0cc16154ad8196bd6040ad468"
+  resolved "git+ssh://git@github.com:bitgenics/linc-front-end.git#a5c77648293cdfc0cc16154ad8196bd6040ad468"
   dependencies:
     "@fortawesome/fontawesome-svg-core" "^1.2.0-14"
     "@fortawesome/free-brands-svg-icons" "^5.1.0-11"

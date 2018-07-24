@@ -7,12 +7,11 @@
     "start": "react-static start",
     "stage": "react-static build --staging",
     "build": "react-static build",
-    "serve": "serve dist -p 3000",
-    "preinstall": "git config credential.helper cache && git ls-remote https://git:$GITHUB_ACCESS_TOKEN@github.com/bitgenics/linc-front-end.git"
+    "serve": "serve dist -p 3000"
   },
   "dependencies": {
     "axios": "^0.16.2",
-    "linc-front-end": "https://git@github.com/bitgenics/linc-front-end.git",
+    "linc-front-end": "git+ssh://git@github.com:bitgenics/linc-front-end.git",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
     "react-router": "^4.2.0",
