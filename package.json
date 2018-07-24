@@ -8,7 +8,7 @@
     "stage": "react-static build --staging",
     "build": "react-static build",
     "serve": "serve dist -p 3000",
-    "preinstall": "sed -i.bak 's/git@github\\.com/git:'$GITHUB_ACCESS_TOKEN'@github.com/' package.json && cat package.json"
+    "preinstall": "printenv; if [[ $NETLIFY == \"1\" ]]; then sed -i.bak 's/git@github\\.com/git:'$GITHUB_ACCESS_TOKEN'@github.com/' package.json && cat package.json; else echo \"Not on Netlify, skipping.\"; fi"
   },
   "dependencies": {
     "axios": "^0.16.2",
