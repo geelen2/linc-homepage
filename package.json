@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "axios": "^0.16.2",
-    "linc-front-end": "git+ssh://git@github.com:bitgenics/linc-front-end.git",
+    "cfp-2018": "git+ssh://git@github.com:vsfest/cfp-2018.git",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
     "react-router": "^4.2.0",

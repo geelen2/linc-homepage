@@ -4,19 +4,20 @@ import styled, { injectGlobal } from 'styled-components'
 import { hot } from 'react-hot-loader'
 //
 import Routes from 'react-static-routes'
-import { media } from 'linc-front-end/src/styles/traits'
+// import { media } from 'linc-front-end/src/styles/traits'
+
+// ${media.desktop} {
+//   font-size: 16px;
+// }
+// ${media.tablet} {
+//   font-size: 14px;
+// }
+// ${media.phone} {
+//   font-size: 12px;
+// }
 
 injectGlobal`
   html {
-    ${media.desktop} {
-      font-size: 16px;
-    }
-    ${media.tablet} {
-      font-size: 14px;
-    }
-    ${media.phone} {
-      font-size: 12px;
-    }
   }
   
   body {

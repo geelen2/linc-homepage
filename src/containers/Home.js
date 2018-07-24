@@ -3,11 +3,11 @@ import { withSiteData } from 'react-static'
 //
 import logoImg from '../logo.png'
 import styled from 'styled-components'
-import { typography } from 'linc-front-end/src/styles/traits/index'
+// import { typography } from 'linc-front-end/src/styles/traits/index'
 
 const H1 = styled.h1`
-  ${ typography.f1 };
 `
+  // ${ typography.f1 };
 
 export default withSiteData(() => (
   <div>
