@@ -4,11 +4,23 @@ import styled, { injectGlobal } from 'styled-components'
 import { hot } from 'react-hot-loader'
 //
 import Routes from 'react-static-routes'
+import { media } from 'linc-front-end/src/styles/traits'
 
 injectGlobal`
+  html {
+    ${media.desktop} {
+      font-size: 16px;
+    }
+    ${media.tablet} {
+      font-size: 14px;
+    }
+    ${media.phone} {
+      font-size: 12px;
+    }
+  }
+  
   body {
-    font-family: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial,
-      'Lucida Grande', sans-serif;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
     font-weight: 300;
     font-size: 16px;
     margin: 0;

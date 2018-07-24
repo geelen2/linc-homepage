@@ -2,10 +2,16 @@ import React from 'react'
 import { withSiteData } from 'react-static'
 //
 import logoImg from '../logo.png'
+import styled from 'styled-components'
+import { typography } from 'linc-front-end/src/styles/traits/index'
+
+const H1 = styled.h1`
+  ${ typography.f1 };
+`
 
 export default withSiteData(() => (
   <div>
-    <h1 style={{ textAlign: 'center' }}>Welcome to</h1>
+    <H1>Welcome to</H1>
     <img src={logoImg} alt="" />
   </div>
 ))
