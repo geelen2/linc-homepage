@@ -6,7 +6,7 @@ import styled from 'styled-components'
 import { typography } from 'lfe/styles/traits/index'
 
 const H1 = styled.h1`
-  ${ typography.f1.positive };
+  ${ typography.f1.positive.underline };
 `
 
 export default withSiteData(() => (
