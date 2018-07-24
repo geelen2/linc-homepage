@@ -8,11 +8,11 @@
     "stage": "react-static build --staging",
     "build": "react-static build",
     "serve": "serve dist -p 3000",
-    "preinstall": "printenv; if [[ $NETLIFY == \"1\" ]]; then sed -i.bak 's/git@github\\.com/git:'$GITHUB_ACCESS_TOKEN'@github.com/' package.json && cat package.json; else echo \"Not on Netlify, skipping.\"; fi"
+    "preinstall": "if [[ $NETLIFY_BUILD_BASE == \"1\" ]]; then sed -i.bak 's/git@github\\.com/git:'$GITHUB_ACCESS_TOKEN'@github.com/' package.json && cat package.json; else echo \"Not on Netlify, skipping.\"; fi"
   },
   "dependencies": {
     "axios": "^0.16.2",
-    "linc-front-end": "https://git@github.com/geelen2/linc-homepage.git",
+    "linc-front-end": "https://git@github.com/geelen2/linc-homepage.git#master",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
     "react-router": "^4.2.0",
