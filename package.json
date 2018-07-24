@@ -8,11 +8,11 @@
     "stage": "react-static build --staging",
     "build": "react-static build",
     "serve": "serve dist -p 3000",
-    "preinstall": "sed -i .bak \"s/\\$GITHUB_ACCESS_TOKEN\\@/git:$GITHUB_ACCESS_TOKEN\\@/\" package.json"
+    "preinstall": "sed -i .bak \"s/\\$\\$GITHUB_ACCESS_TOKEN/$GITHUB_ACCESS_TOKEN/\" package.json && cat package.json"
   },
   "dependencies": {
     "axios": "^0.16.2",
-    "linc-front-end": "https://git:$GITHUB_ACCESS_TOKEN@github.com/geelen2/linc-homepage.git",
+    "linc-front-end": "https://git:7830d71edcf01aa3e2de395608b25754d5dbb85f@github.com/geelen2/linc-homepage.git",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
     "react-router": "^4.2.0",
