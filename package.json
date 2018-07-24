@@ -8,7 +8,7 @@
     "stage": "react-static build --staging",
     "build": "react-static build",
     "serve": "serve dist -p 3000",
-    "preinstall": "sed -i .bak 's/\\$\\$GITHUB_ACCESS_TOKEN/'$GITHUB_ACCESS_TOKEN'/' package.json && cat package.json"
+    "preinstall": "sed -i.bak 's/\\$\\$GITHUB_ACCESS_TOKEN/'$GITHUB_ACCESS_TOKEN'/' package.json && cat package.json"
   },
   "dependencies": {
     "axios": "^0.16.2",
