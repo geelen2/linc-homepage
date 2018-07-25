@@ -8,48 +8,11 @@ import { base } from 'lfe/styles/globals'
 
 injectGlobal`
   ${base};
-  
-`
-
-const AppStyles = styled.div`
-  a {
-    text-decoration: none;
-    color: #108db8;
-    font-weight: bold;
-  }
-
-  nav {
-    width: 100%;
-    background: #108db8;
-
-    a {
-      color: white;
-      padding: 1rem;
-      display: inline-block;
-    }
-  }
-
-  .content {
-    padding: 1rem;
-  }
-
-  img {
-    max-width: 100%;
-  }
 `
 
 const App = () => (
   <Router>
-    <AppStyles>
-      <nav>
-        <Link exact to="/">Home</Link>
-        <Link to="/about">About</Link>
-        <Link to="/blog">Blog</Link>
-      </nav>
-      <div className="content">
-        <Routes />
-      </div>
-    </AppStyles>
+    <Routes />
   </Router>
 )
 
