@@ -26,8 +26,9 @@ const Banner = styled.header`
 `
 
 const Nav = styled.nav`
-  ${spacing.p1};
+  ${spacing.p1.ml1_within};
   ${flex.align_center};
+  color: white;
 `
 
 const Logo = styled.a.attrs({
@@ -41,7 +42,8 @@ const Logo = styled.a.attrs({
 `
 
 const SectionLink = styled.a`
-
+  color: inherit;
+  text-decoration: none;
 `
 
 export default hot(module)(
@@ -52,7 +54,7 @@ export default hot(module)(
           <Logo />
           <SectionLink href="#features">Features</SectionLink>
           <SectionLink href="#pricing">Pricing</SectionLink>
-          <Button url="https://app.linc.host">Sign in</Button>
+          <Button.A white href="https://app.linc.host">Sign in</Button.A>
         </Nav>
       </Banner>
     </div>
