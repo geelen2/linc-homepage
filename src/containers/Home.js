@@ -1,5 +1,6 @@
 import React from 'react'
 import { withSiteData } from 'react-static'
+import { hot } from 'react-hot-loader'
 //
 import logoImg from '../logo.png'
 import styled from 'styled-components'
@@ -9,9 +10,9 @@ const H1 = styled.h1`
   ${ typography.f1.positive.underline };
 `
 
-export default withSiteData(() => (
+export default hot(module)(withSiteData(() => (
   <div>
     <H1>Welcome to</H1>
     <img src={logoImg} alt="" />
   </div>
-))
+)))
