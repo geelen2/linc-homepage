@@ -6,7 +6,11 @@ import { hot } from 'react-hot-loader'
 import Routes from 'react-static-routes'
 import { media } from 'lfe/styles/traits'
 
+import wipe from 'css-wipe/js'
+
 injectGlobal`
+  ${wipe};
+  
   html {
     ${media.desktop} {
       font-size: 16px;
@@ -17,14 +21,6 @@ injectGlobal`
     ${media.phone} {
       font-size: 12px;
     }
-  }
-  
-  body {
-    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
-    font-weight: 300;
-    font-size: 16px;
-    margin: 0;
-    padding: 0;
   }
 `
 
