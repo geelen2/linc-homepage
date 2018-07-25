@@ -6,7 +6,7 @@ import banner from 'assets/banner.svg'
 import logo from 'assets/Logo.svg'
 import styled from 'styled-components'
 import { media, flex, containers, spacing } from 'lfe/styles/traits/index'
-import Button from 'lfe/components/Button'
+import Button from '../components/Button'
 
 const Banner = styled.header`
   background: url('${banner}') no-repeat 50% 100%;
@@ -27,7 +27,7 @@ const Banner = styled.header`
 
 const Nav = styled.nav`
   ${spacing.p1};
-  ${flex};
+  ${flex.align_center};
 `
 
 const Logo = styled.a.attrs({
@@ -40,14 +40,18 @@ const Logo = styled.a.attrs({
   ${spacing.mra};
 `
 
+const SectionLink = styled.a`
+
+`
+
 export default hot(module)(
   withSiteData(() => (
     <div>
       <Banner>
         <Nav>
           <Logo />
-          <SectionLink>Features</SectionLink>
-          <SectionLink>Pricing</SectionLink>
+          <SectionLink href="#features">Features</SectionLink>
+          <SectionLink href="#pricing">Pricing</SectionLink>
           <Button url="https://app.linc.host">Sign in</Button>
         </Nav>
       </Banner>
