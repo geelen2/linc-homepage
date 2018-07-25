@@ -4,24 +4,11 @@ import styled, { injectGlobal } from 'styled-components'
 import { hot } from 'react-hot-loader'
 //
 import Routes from 'react-static-routes'
-import { media } from 'lfe/styles/traits'
-
-import wipe from 'css-wipe/js'
+import { base } from 'lfe/styles/globals'
 
 injectGlobal`
-  ${wipe};
+  ${base};
   
-  html {
-    ${media.desktop} {
-      font-size: 16px;
-    }
-    ${media.tablet} {
-      font-size: 14px;
-    }
-    ${media.phone} {
-      font-size: 12px;
-    }
-  }
 `
 
 const AppStyles = styled.div`

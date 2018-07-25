@@ -12,7 +12,6 @@
   },
   "dependencies": {
     "axios": "^0.16.2",
-    "css-wipe": "^4.3.0",
     "linc-front-end": "git+ssh://git@github.com:bitgenics/linc-front-end.git",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
