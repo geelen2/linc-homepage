@@ -8,7 +8,7 @@
     "stage": "react-static build --staging",
     "build": "react-static build",
     "serve": "serve dist -p 3000",
-    "preinstall": "echo $NETLIFY_BUILD_BASE; if [ -z ${NETLIFY_BUILD_BASE+x} ]; then echo \"Not on Netlify, skipping.\"; else sed -i.bak 's/git+ssh:\\/\\/git@github\\.com:/https:\\/\\/git:'$GITHUB_ACCESS_TOKEN'@github.com\//' package.json && diff package.json package.json.bak || true; fi"
+    "preinstall": "echo $NETLIFY_BUILD_BASE; if [ -z ${NETLIFY_BUILD_BASE+x} ]; then echo \"Not on Netlify, skipping.\"; else sed -i.bak 's/git+ssh:\\/\\/git@github\\.com:/https:\\/\\/git:'$GITHUB_ACCESS_TOKEN'@github.com\\//' package.json && diff package.json package.json.bak || true; fi"
   },
   "dependencies": {
     "axios": "^0.16.2",
