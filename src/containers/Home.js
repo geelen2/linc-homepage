@@ -10,12 +10,14 @@ import {
   flex,
   typography,
   border,
-  spacing
+  spacing,
+  backgrounds,
+  containers
 } from 'lfe/styles/traits/index'
 import Button from '../components/Button'
 
 import Headline from '../components/Headline'
-import { containers } from '../lfe/styles/traits'
+import colors from '../lfe/styles/colors'
 
 const BannerBackground = styled.header`
   position: absolute;
@@ -120,7 +122,7 @@ const PrScreenshot = styled.div.attrs({
 
 const Features = styled.div`
   ${containers.content};
-  ${spacing.mt15_within};
+  ${spacing.mt1_within};
   ${flex.vertical.align_center};
 `
 
@@ -135,14 +137,18 @@ const Feature = styled.div.attrs({
     </React.Fragment>
   )
 })`
-  ${flex.align_center};
+  ${flex.center_both.wrap};
   
   [role="image"] {
-    ${spacing.mr3};
+    ${spacing.mr3.mt1};
     background: url('${props => props.image}') no-repeat 50% 50% / contain;
     width: 12rem;
     height: 12rem;
     flex-shrink: 0;
+  }
+  
+  > div {
+    ${spacing.mt1};
   }
   
   h2 {
@@ -156,9 +162,86 @@ const Feature = styled.div.attrs({
   }
 `
 
+const Cta = styled.div`
+  ${typography.f4};
+  ${flex.center_both.vertical};
+  ${spacing.mt1_within.pv2};
+`
+
+const Signup = styled.form.attrs({
+  action:
+    'https://bitgenics.us14.list-manage.com/subscribe/post?u=11d03680b2addc485abad93ba&amp;id=360a34c76d',
+  method: 'post',
+  target: '_blank',
+  children: (
+    <React.Fragment>
+      <input
+        type="email"
+        aria-label="Enter your email address"
+        name="EMAIL"
+        required="true"
+        placeholder="Enter your email address"
+      />
+      {/*real people should not fill this in and expect good things - do not remove this or risk form bot signups*/}
+      <div style={{ position: 'absolute', left: '-5000px' }} aria-hidden="true">
+        <input
+          type="text"
+          name="b_11d03680b2addc485abad93ba_360a34c76d"
+          tabIndex="-1"
+          value=""
+        />
+      </div>
+      <Button type="submit">
+        Sign up
+      </Button>
+    </React.Fragment>
+  )
+})`
+  ${flex.center_both};
+  ${spacing.ml1_within};
+  ${containers.form};
+  position: relative;
+  background: white;
+
+  > input {
+    ${typography.inherit.medium};
+    ${spacing.ph1.pv05};
+    ${border.br2.solid.bw2};
+    width: 100%;
+    align-self: stretch;
+    border-color: ${colors.bg_purple};
+  }
+
+  > button {
+    ${typography.bold};
+    flex-shrink: 0;
+  }
+  
+  @supports (mix-blend-mode: lighten) and (pointer-events: none) {
+    &::after {
+      content: '';
+      ${containers.abs_fill};
+      mix-blend-mode: lighten;
+      ${backgrounds.gradient1};
+      z-index: 1;
+      pointer-events: none;
+    }
+    
+    > input {
+      border-color: black;
+    }
+    
+    > button {
+      background: black;
+    }
+  }
+`
+
 const Footer = styled.footer`
   background: url('${require('assets/footer.svg')}') no-repeat 50% 0% / cover;
-  min-height: 8rem;
+  color: white;
+  ${spacing.pt3.pb2.mt1_within};
+  ${flex.center_both.vertical};
 `
 
 export default hot(module)(
@@ -198,7 +281,15 @@ export default hot(module)(
             copy="Performance and security baked-in: code splitting, a global CDN, server-side rendering & more."
           />
         </Features>
-        <Footer />
+        <Cta>
+          <p>Linc is currently in private beta.</p>
+          <p>For early access, sign up to our mailing list:</p>
+          <Signup />
+        </Cta>
+        <Footer>
+          <img src={require('assets/footer-logo.svg')} alt="Linc logo" />
+          <p>made with ♥️ in Melbourne, Australia</p>
+        </Footer>
       </Main>
     </div>
   ))
