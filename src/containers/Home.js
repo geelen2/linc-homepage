@@ -198,7 +198,7 @@ const Signup = styled.form.attrs({
   )
 })`
   ${flex.center_both};
-  ${spacing.ml1_within};
+  ${spacing.ml1_within.pt1};
   ${containers.form};
   position: relative;
   background: white;
