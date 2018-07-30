@@ -32,7 +32,7 @@ const BannerBackground = styled.header`
   
   ${media.tablet} {
     height: 60vw;
-    min-height: 350px;
+    min-height: 400px;
   }
 `
 const Main = styled.main`

@@ -3,10 +3,13 @@ import styled from 'styled-components'
 import { typography, spacing, flex, media } from '../lfe/styles/traits'
 
 const Wrapper = styled.div`
-  ${spacing.p1.pt4};
+  ${spacing.pt4.mha.pb2};
+  width: calc(100vw - 4rem);
+  max-width: 1580px;
   
   ${ media.tablet } {
     text-shadow: 0 1px 3px black;
+    ${spacing.pl1.pt2};
   }
 `
 
@@ -19,23 +22,35 @@ const Big = styled.div`
   ${ media.tablet } {
     font-size: 3rem;
   }
+  ${ media.giant } {
+    font-size: 5rem;
+  }
 `
 
 const Small = styled.div`
-  ${ typography.f4 };
   ${ spacing.mb2 };
   line-height: 1.4;
+  width: 27em;
+  font-size: 2.1vw;
+  
+  ${ media.tablet } {
+    ${ typography.f4 };
+    width: 20em;
+  }
+  ${ media.giant } {
+    font-size: 2.5rem;
+  }
 `
 
 export default () => (
   <Wrapper>
     <Big>
-      Deploy instantly.<br />
-      Release confidently.
+      We automate.<br />
+      You iterate.
     </Big>
     <Small>
-      Production-ready reploys for every PR.<br />
-      Merge & release with a click.
+      Taking the friction out of releasing front-end applications
+      so you can focus on <strong>delighting your customers.</strong>
     </Small>
   </Wrapper>
 )

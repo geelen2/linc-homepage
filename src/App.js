@@ -16,6 +16,11 @@ injectGlobal`
     font-family: Rubik, ${typography.system_font_stack};
     font-variant-ligatures: no-common-ligatures;
     font-feature-settings: "liga" off;
+    ${ typography.regular };
+  }
+  
+  strong {
+    ${ typography.medium };
   }
 `
 
