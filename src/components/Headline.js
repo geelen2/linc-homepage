@@ -3,17 +3,18 @@ import styled from 'styled-components'
 import { typography, spacing, flex, media } from '../lfe/styles/traits'
 
 const Wrapper = styled.div`
-  ${spacing.pt4.mha.pb2};
+  ${spacing.pt2.mha.pb2};
   width: calc(100vw - 4rem);
   max-width: 1580px;
+  color: white;
   
   ${ media.tablet } {
     text-shadow: 0 1px 3px black;
-    ${spacing.pl1.pt2};
+    ${spacing.pl1};
   }
 `
 
-const Big = styled.div`
+const Big = styled.h1`
   ${ typography.medium.condensed };
   ${ spacing.mb2 };
   line-height: 1.2;
@@ -27,8 +28,7 @@ const Big = styled.div`
   }
 `
 
-const Small = styled.div`
-  ${ spacing.mb2 };
+const Small = styled.p`
   line-height: 1.4;
   width: 27em;
   font-size: 2.1vw;
